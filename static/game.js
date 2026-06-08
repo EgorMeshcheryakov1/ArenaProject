@@ -1,7 +1,7 @@
 "use strict";
 
 const CFG = {
-  WS_URL:        `ws://${location.host}/ws`,
+  WS_URL: `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`,
   ARENA_CX:      350,
   ARENA_CY:      350,
   ARENA_RADIUS:  280,          // будет переписан из сообщения "start"
